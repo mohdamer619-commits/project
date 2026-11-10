@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  <!-- Crescent Moon -->
+  <path d="M 280 120 A 130 130 0 1 0 380 340 A 155 155 0 1 1 280 120 Z" fill="url(#gold)" filter="url(#glow)" />
+  <!-- Radiant Light Star -->
+  <path d="M 340 180 Q 340 215 365 215 Q 340 215 340 250 Q 340 215 315 215 Q 340 215 340 180 Z" fill="#ffffff" />
+  <!-- Mihrab / Dome silhouette at bottom -->
+  <path d="M 176 390 C 176 320 220 280 256 260 C 292 280 336 320 336 390 Z" fill="#10b981" opacity="0.3" />
+  <path d="M 206 390 C 206 340 236 310 256 295 C 276 310 306 340 306 390 Z" fill="url(#gold)" opacity="0.8" />
+</svg>

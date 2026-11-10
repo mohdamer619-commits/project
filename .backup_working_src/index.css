@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased transition-colors duration-200;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    background-color: var(--theme-bg-light, #fcfbf7);
+  }
+}
+
+:root, [data-theme="emerald"] {
+  --theme-bg-light: #fcfbf7;
+  --theme-bg-dark: #041d16;
+}
+
+[data-theme="midnight"], [data-theme="indigo"] {
+  --theme-bg-light: #f8fafc;
+  --theme-bg-dark: #0b132b;
+}
+
+[data-theme="desert"], [data-theme="sand"] {
+  --theme-bg-light: #fffdf5;
+  --theme-bg-dark: #1c140e;
+}
+
+[data-theme="purple"] {
+  --theme-bg-light: #faf5ff;
+  --theme-bg-dark: #180b26;
+}
+
+[data-theme="ocean"] {
+  --theme-bg-light: #f0f9ff;
+  --theme-bg-dark: #041624;
+}
+
+[data-theme="rose"] {
+  --theme-bg-light: #fff1f2;
+  --theme-bg-dark: #260a15;
+}
+
+[data-theme="obsidian"] {
+  --theme-bg-light: #f4f4f5;
+  --theme-bg-dark: #09090b;
+}
+
+[data-theme="arctic"] {
+  --theme-bg-light: #f8fafc;
+  --theme-bg-dark: #0f172a;
+}
+
+html.dark body {
+  background-color: var(--theme-bg-dark, #041d16);
+}
+
+/* Safe area padding utilities for iOS notch & Android gesture navigation */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.pl-safe {
+  padding-left: env(safe-area-inset-left, 0px);
+}
+.pr-safe {
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+.font-arabic {
+  font-family: 'Amiri', 'Traditional Arabic', 'Scheherazade New', serif;
+  line-height: 2.2;
+}
+

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Nur al-Salat</title>
+    <meta name="description" content="An elegant, comprehensive Islamic Salah application featuring automatic prayer times, live solar progress, authentic Adhkar from primary sources, and Quran." />
+    <meta property="og:title" content="Nur al-Salat" />
+    <meta property="og:description" content="An elegant, comprehensive Islamic Salah application featuring automatic prayer times, live solar progress, authentic Adhkar from primary sources, and Quran." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Security Headers & Content Security Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://*.ytimg.com https://i.ytimg.com; media-src 'self' blob: data:; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://www.youtube.com https://*.googlevideo.com; object-src 'none'; base-uri 'self';" />
+    
+    <!-- Anti-Flash Theme & Mode Initializer -->
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem('nur_theme') || 'emerald';
+          var savedMode = localStorage.getItem('nur_theme_mode') || 'system';
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var isDark = savedMode === 'dark' || (savedMode === 'system' && prefersDark);
+          
+          document.documentElement.setAttribute('data-theme', savedTheme);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    
+    <!-- Platform PWA & Color Configuration -->
+    <meta name="theme-color" content="#064e3b" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- Apple iOS Safari & iPadOS Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Nur al-Salat" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <!-- Microsoft Windows (Edge / Chrome Desktop & Tablet) Support -->
+    <meta name="application-name" content="Nur al-Salat" />
+    <meta name="msapplication-TileColor" content="#064e3b" />
+    <meta name="msapplication-TileImage" content="/pwa-192x192.png" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="msapplication-config" content="none" />
+
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
